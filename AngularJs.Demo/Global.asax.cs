@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AngularJs.Demo.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,9 @@ namespace AngularJs.Demo
     {
         protected void Application_Start()
         {
+            ContainerConfig.RegisterComponets();
             AreaRegistration.RegisterAllAreas();
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
