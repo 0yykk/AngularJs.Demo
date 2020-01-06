@@ -10,7 +10,7 @@ using Demo.Provider.Provider;
 
 namespace AngularJs.Demo.Controllers
 {
-    [RoutePrefix("api/Album")]
+    [RoutePrefix("api/Album")] 
     public class AlbumController : ApiController
     {
         private readonly IAlbumProvider _albumProvider;
@@ -27,13 +27,21 @@ namespace AngularJs.Demo.Controllers
             albumlist = await _albumProvider.GetAllAlbumAsync();
             return albumlist;
         }
+        //[HttpGet]
+        //[Route("GetAllAlbum")]
+        //public List<AlbumViewModel> GetAllAlbum()
+        //{
+        //    var albumlist = new List<AlbumViewModel>();
+        //    albumlist =  _albumProvider.GetAllAlbum();
+        //    return albumlist;
+        //}
         [HttpGet]
-        [Route("GetAllAlbum")]
-        public List<AlbumViewModel> GetAllAlbum()
+        [Route("details/{id}")]
+        public async Task<AlbumViewModel> GetAlbumById(int id)
         {
-            var albumlist = new List<AlbumViewModel>();
-            albumlist =  _albumProvider.GetAllAlbum();
-            return albumlist;
+            var album = new AlbumViewModel();
+            album = await _albumProvider.GetAlbumById(id);
+            return album;
         }
     }
 }

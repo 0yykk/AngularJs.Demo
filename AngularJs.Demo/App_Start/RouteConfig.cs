@@ -13,6 +13,14 @@ namespace AngularJs.Demo
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapMvcAttributeRoutes();
+
+            //routes.MapRoute(
+            //    name: "Home",
+            //    url: "{language}",
+            //    defaults: new { controller = "Home", action = "Index" }
+            //    );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

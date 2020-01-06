@@ -1,16 +1,12 @@
 ﻿@section scripts{
     <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
     <script src="~/Client/Scripts/atTheAlbum.js"></script>
     <script src="~/Client/Scripts/ListAlbum.js"></script>
+    <script src="~/Client/Scripts/DetailsController.js"></script>
     }
 
-<div ng-app="atTheAlbum">
-    <div ng-controller="ListController">
-       
-        <table>
-            <tr ng-repeat="album in albums">
-                <td>{{album.Title}}</td>
-            </tr>
-        </table>
-    </div>
+
+<div data-ng-app="atTheAlbum">
+    <ng-view></ng-view>
 </div>

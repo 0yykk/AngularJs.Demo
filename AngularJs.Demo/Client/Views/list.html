@@ -1,0 +1,11 @@
+﻿<div ng-controller="ListController">
+    <table>
+        <tr ng-repeat="album in albums">
+            <td>{{album.Title}}</td>
+            <td>{{album.ArtistName}}</td>
+            <td>
+                <a href="#!/details/{{album.AlbumId}}">Details</a>
+            </td>
+        </tr>
+    </table>
+</div>
