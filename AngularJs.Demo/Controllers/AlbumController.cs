@@ -20,28 +20,19 @@ namespace AngularJs.Demo.Controllers
         }
 
         [HttpGet]
-        [Route("GetAllAlbumAsync")]
         public async Task<List<AlbumViewModel>> GetAllAlbumAsync()
         {
             var albumlist = new List<AlbumViewModel>();
             albumlist = await _albumProvider.GetAllAlbumAsync();
             return albumlist;
         }
-        //[HttpGet]
-        //[Route("GetAllAlbum")]
-        //public List<AlbumViewModel> GetAllAlbum()
-        //{
-        //    var albumlist = new List<AlbumViewModel>();
-        //    albumlist =  _albumProvider.GetAllAlbum();
-        //    return albumlist;
-        //}
         [HttpGet]
-        [Route("details/{id}")]
         public async Task<AlbumViewModel> GetAlbumById(int id)
         {
             var album = new AlbumViewModel();
             album = await _albumProvider.GetAlbumById(id);
             return album;
         }
+        
     }
 }

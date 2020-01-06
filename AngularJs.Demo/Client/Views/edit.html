@@ -1,0 +1,32 @@
+﻿<div ng-controller="EditController">
+    <form ng-show="isEditable()">
+        <fieldset>
+            <div class="form-group">
+                <label for="Title">
+                    Title
+                </label>
+                <input id="title" type="text" ng-model="edit.album.Title" required class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Artist">
+                    Artist
+                </label>
+                <input id="artist" type="text" ng-model="edit.album.ArtistName" required class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="Genre">
+                    Genre
+                </label>
+                <input id="genre" type="text" ng-model="edit.album.GenreName" required class="form-control" />
+            </div>
+            <div class="form-group"> 
+                <label for="Price">
+                    Price
+                </label>
+                <input id="price" type="text" ng-model="edit.album.Price" required class="form-control" />
+            </div>
+            <button class="btn btn-default" ng-click="save()">Save</button>
+            <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+        </fieldset>
+    </form>
+</div>

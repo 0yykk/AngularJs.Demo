@@ -276,10 +276,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Client\Scripts\albumService.js" />
     <Content Include="Client\Scripts\atTheAlbum.js" />
     <Content Include="Client\Scripts\DetailsController.js" />
+    <Content Include="Client\Scripts\EditController.js" />
     <Content Include="Client\Scripts\ListAlbum.js" />
     <Content Include="Client\Views\details.html" />
+    <Content Include="Client\Views\edit.html" />
     <Content Include="Client\Views\list.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
